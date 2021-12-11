@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model person
+<h3>Edit Employee</h3>
+<hr />
+
+<form asp-controller="Employee" asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label asp-for="firstname" class="form-label">First Name</label>
+        <span class="text-danger" asp-validation-for="firstname"></span>
+        <input type="text" class="form-control" asp-for="firstname">
+    </div>
+    <div class="mb-3">
+        <label asp-for="lastname" class="form-label">Last Name</label>
+        <span class="text-danger" asp-validation-for="lastname"></span>
+        <input type="text" class="form-control" asp-for="lastname">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Address" class="form-label">Address</label>
+        <span class="text-danger" asp-validation-for="Address"></span>
+        <textarea class="form-control" asp-for="Address"></textarea>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Sex" class="form-label">Sex</label>
+        <span class="text-danger" asp-validation-for="Sex"></span>
+
+
+        <input type="text" class="form-control" asp-for="Sex">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Salary" class="form-label">Salary</label>
+        <span class="text-danger" asp-validation-for="Salary"></span>
+        <input type="number" class="form-control" asp-for="Salary">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Employee</button>
+</form>
